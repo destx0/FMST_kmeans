@@ -13,7 +13,7 @@ geo_locs = []
 #loc_ = Point(0.0, 0.0)  #tuples for location
 #geo_locs.append(loc_)
 #read the fountains location from the csv input file and store each fountain location as a Point(latit,longit) object
-f = open('F:\Shivansh Work\University work VIT\Final Year Project\Python\k_means_kruskal\drinking_fountains.csv', 'r')
+f = open('/home/wubu/space/cud/kfmst/FMST_kmeans/drinking_fountains.csv', 'r')
 reader = csv.DictReader(f, delimiter=",")
 
 ct=0 #key for geo_locs
@@ -51,7 +51,7 @@ else:
 ##.............aMST_two
 print '\n\n..........................................................\n\n'
 print 'Press 1 to make MSTs of the midpoints of the adjacent centroids of clusters'
-data=input()
+# data=input()
 
 cluster_nodes=cluster_nodes-1
 cluster_two = clustering(geo_locs, cluster_nodes )
@@ -60,7 +60,7 @@ final_two = cluster_two.print_clusters(cluster_two.clusters)
 
 print '\n\n\n********************************************\n'
 print 'Press 1 to join MST of clusters, and MST of centroid mid-points***'
-data=input()
+# data=input()
 
 
 '''...............................................Making the final mst of the joined graph'''
