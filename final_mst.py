@@ -44,18 +44,18 @@ def print_centroid():
     global test
     test = g.KruskalMST() #has [u,v,w]
 
-    print 'STEP 3 \nPress 0: To draw MST of cluster CENTROIDS on canvas \nPress 1: To print MST edges of cluster CENTROIDS'
-    data = input()
-    plt.figure(figsize=(12,12)) #new window figure of size 12:12
-    for u,v,weight in test:                          
-            if data==1:
-                print ("Distance from (%f,%f)  -- (%f,%f) is : %f" % (u.latit,u.longit,v.latit,v.longit, weight))
-            #Now plotting it
-            x=np.linspace(u.latit,v.latit)
-            y=np.linspace(u.longit,v.longit)
-            plt.plot(x, y)
-    #plt.draw()  
-    plt.show()
+    # print 'STEP 3 \nPress 0: To draw MST of cluster CENTROIDS on canvas \nPress 1: To print MST edges of cluster CENTROIDS'
+    # data = 0
+    # plt.figure(figsize=(12,12)) #new window figure of size 12:12
+    # for u,v,weight in test:                          
+    #         if data==1:
+    #             print ("Distance from (%f,%f)  -- (%f,%f) is : %f" % (u.latit,u.longit,v.latit,v.longit, weight))
+    #         #Now plotting it
+    #         x=np.linspace(u.latit,v.latit)
+    #         y=np.linspace(u.longit,v.longit)
+    #         plt.plot(x, y)
+    # #plt.draw()  
+    # plt.show()
 
 
 ##...........This function joins - Subset MST's (of adjacent clusters(as in MST of centroids){ mst_all_clusters[cluster number][0] stores all point of every cluster ) AND Centroid MST(test stores u,v,w of all centroids)}
@@ -96,8 +96,8 @@ def mst(mst_all_clusters):
             y=np.linspace(m.longit,n.longit)
             plt.plot(x, y)
             final.append([m,n,weight])   #Appends as u,v edge in final[]
-    plt.show()
-    print '....................................End of final_mst.py'
+    # plt.show()
+    # print '....................................End of final_mst.py'
     return final    #returns to complete_graph() , make_graph.py --> cluster.print_clusters(), clustering.py --> final_one[] in run_main.py
 
 ##Function to return midpoint of adjacent centroids, in the list new[]

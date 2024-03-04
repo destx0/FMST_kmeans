@@ -163,6 +163,7 @@ class clustering:
                 self.means = means
         self.clusters = clusters
         #plot cluster for evluation
+        plot_flag = 0
         if plot_flag!=0:
             fig = plt.figure( figsize=(12,12))
             ax = fig.add_subplot(111)
